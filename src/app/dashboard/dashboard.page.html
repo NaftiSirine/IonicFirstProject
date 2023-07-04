@@ -1,32 +1,229 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title class="bg-tertiary">Orders</ion-title>
+  <ion-toolbar class="mb-2">
+    <ion-title class="bg-whiteColor  color='blueLogo'" >Orders</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-tabs>
-    <!-- Tab bar -->
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="schedule">
-        <ion-icon name="calendar" aria-hidden="true"></ion-icon>
-        <ion-label>Schedule</ion-label>
-      </ion-tab-button>
+  <ion-segment [(ngModel)]="selectedSegment">
+    <ion-segment-button value="default">
+      <ion-label>Sandwich</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Plats</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+
+
   
-      <ion-tab-button tab="speakers">
-        <ion-icon name="person-circle" aria-hidden="true"></ion-icon>
-        <ion-label>Speakers</ion-label>
-      </ion-tab-button>
+  <ion-card *ngIf="selectedSegment == 'default'" >
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+           <ion-thumbnail slot="start">
+            <ion-router-link [routerLink]="['/details']">
+              <img alt="Silhouette of mountains" src="https://recette.supertoinette.com/150722/b/salade-de-pates-a-la-tomate-et-au-basilic.jpg" />
+            </ion-router-link>
+          </ion-thumbnail>
+          <ion-label>Salami </ion-label>
+          <ion-grid [fixed]="true" class="flex">
+            <ion-row>
+              <ion-col>2</ion-col>
+            </ion-row>
+            <ion-button [ngStyle]="{ 'color': selectedButtonIndex === 0 ? 'green' : 'red' }" size="small" (click)="changeGridBackground(0)" class="">Done</ion-button>
+          </ion-grid>
+          
+          
+        </ion-item>
   
-      <ion-tab-button tab="map">
-        <ion-icon name="map" aria-hidden="true"></ion-icon>
-        <ion-label>Map</ion-label>
-      </ion-tab-button>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-router-link [routerLink]="['/new-page']">
+              <img alt="Silhouette of mountains" src="https://recette.supertoinette.com/151863/m/salade-de-riz-au-thon-tomates-et-poivrons.jpg" />
+            </ion-router-link>
+          </ion-thumbnail>
+          <ion-label>Kafteji</ion-label>
+          <ion-grid [fixed]="true" class="flex">
+            <ion-row>
+              <ion-col>2</ion-col>
+            </ion-row>
+<ion-button [ngStyle]="{ 'color': selectedButtonIndex === 1 ? 'green' : 'red' }" size="small" (click)="changeGridBackground(1)" class="">Done</ion-button>
+          </ion-grid>
+        </ion-item>
+    
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-router-link [routerLink]="['/new-page']">
+              <img alt="Silhouette of mountains" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLzyDmiC5rVPOgbnY8KYOeoASqwwgBQiMoTg&usqp=CAU" />
+            </ion-router-link>
+          </ion-thumbnail>
+          <ion-label>Escalope Grillé</ion-label>
+          <ion-grid [fixed]="true" class="flex">
+            <ion-row>
+              <ion-col>2</ion-col>
+            </ion-row>
+<ion-button [ngStyle]="{ 'color': selectedButtonIndex === 2 ? 'green' : 'red' }" size="small" (click)="changeGridBackground(2)" class="">Done</ion-button>
+          </ion-grid>
+        </ion-item>
   
-      <ion-tab-button tab="about">
-        <ion-icon name="information-circle" aria-hidden="true"></ion-icon>
-        <ion-label>About</ion-label>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-router-link [routerLink]="['/new-page']">
+              <img alt="Silhouette of mountains" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLzyDmiC5rVPOgbnY8KYOeoASqwwgBQiMoTg&usqp=CAU" />
+            </ion-router-link>
+          </ion-thumbnail>
+          <ion-label>Escalope Grillé</ion-label>
+          <ion-grid [fixed]="true" class="flex">
+            <ion-row>
+              <ion-col>2</ion-col>
+            </ion-row>
+<ion-button [ngStyle]="{ 'color': selectedButtonIndex === 3 ? 'green' : 'red' }" size="small" (click)="changeGridBackground(3)" class="">Done</ion-button>
+          </ion-grid>
+        </ion-item>
+
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-router-link [routerLink]="['/new-page']">
+              <img alt="Silhouette of mountains" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLzyDmiC5rVPOgbnY8KYOeoASqwwgBQiMoTg&usqp=CAU" />
+            </ion-router-link>
+          </ion-thumbnail>
+          <ion-label>Escalope Grillé</ion-label>
+          <ion-grid [fixed]="true" class="flex">
+            <ion-row>
+              <ion-col>2</ion-col>
+            </ion-row>
+<ion-button [ngStyle]="{ 'color': selectedButtonIndex === 4 ? 'green' : 'red' }" size="small" (click)="changeGridBackground(4)" class="">Done</ion-button>
+          </ion-grid>
+        </ion-item>
+
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-router-link [routerLink]="['/new-page']">
+              <img alt="Silhouette of mountains" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLzyDmiC5rVPOgbnY8KYOeoASqwwgBQiMoTg&usqp=CAU" />
+            </ion-router-link>
+          </ion-thumbnail>
+          <ion-label>Escalope Grillé</ion-label>
+          <ion-grid [fixed]="true" class="flex">
+            <ion-row>
+              <ion-col>2</ion-col>
+            </ion-row>
+<ion-button [ngStyle]="{ 'color': selectedButtonIndex === 5 ? 'green' : 'red' }" size="small" (click)="changeGridBackground(5)" class="">Done</ion-button>
+          </ion-grid>
+        </ion-item>
+
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-router-link [routerLink]="['/new-page']">
+              <img alt="Silhouette of mountains" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLzyDmiC5rVPOgbnY8KYOeoASqwwgBQiMoTg&usqp=CAU" />
+            </ion-router-link>
+          </ion-thumbnail>
+          <ion-label>Escalope Grillé</ion-label>
+          <ion-grid [fixed]="true" class="flex">
+            <ion-row>
+              <ion-col>2</ion-col>
+            </ion-row>
+<ion-button [ngStyle]="{ 'color': selectedButtonIndex === 6 ? 'green' : 'red' }" size="small" (click)="changeGridBackground(6)" class="">Done</ion-button>
+          </ion-grid>
+        </ion-item>
+
+
+
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <ion-router-link [routerLink]="['/']">
+              <img alt="Silhouette of mountains" src="https://www.aux-fourneaux.fr/wp-content/uploads/2018/05/21-id%C3%A9e-de-plats-l%C3%A9gers-pour-le-repas-du-soir-17.jpg" />
+            </ion-router-link>
+          </ion-thumbnail>
+          <ion-label>makloub</ion-label>
+          <ion-grid [fixed]="true" class="flex">
+            <ion-row>
+              <ion-col>2</ion-col>
+            </ion-row>
+<ion-button [ngStyle]="{ 'color': selectedButtonIndex === 7 ? 'green' : 'red' }" size="small" (click)="changeGridBackground(7)" class="">Done</ion-button>
+          </ion-grid>
+        </ion-item>
+        
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  
+
+
+
+
+
+  <ion-card *ngIf="selectedSegment == 'segment'" >
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+           <ion-thumbnail slot="start">
+            <ion-router-link [routerLink]="['/details']">
+              <img alt="Silhouette of mountains" src="https://recette.supertoinette.com/150722/b/salade-de-pates-a-la-tomate-et-au-basilic.jpg" />
+            </ion-router-link>
+          </ion-thumbnail>
+          <ion-label>mosli </ion-label>
+          <ion-grid [fixed]="true" class="flex">
+            <ion-row>
+              <ion-col>2</ion-col>
+            </ion-row>
+<ion-button [ngStyle]="{ 'color': selectedButtonIndex === 8 ? 'green' : 'red' }" size="small" (click)="changeGridBackground(8)" class="">Done</ion-button>
+          </ion-grid>
+          
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-router-link [routerLink]="['/new-page']">
+              <img alt="Silhouette of mountains" src="https://recette.supertoinette.com/151863/m/salade-de-riz-au-thon-tomates-et-poivrons.jpg" />
+            </ion-router-link>
+          </ion-thumbnail>
+          <ion-label>sushi</ion-label>
+          <ion-grid [fixed]="true" class="flex">
+            <ion-row>
+              <ion-col>2</ion-col>
+            </ion-row>
+<ion-button [ngStyle]="{ 'color': selectedButtonIndex === 9 ? 'green' : 'red' }" size="small" (click)="changeGridBackground(9)" class="">Done</ion-button>
+          </ion-grid>
+        </ion-item>
+    
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-router-link [routerLink]="['/new-page']">
+              <img alt="Silhouette of mountains" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLzyDmiC5rVPOgbnY8KYOeoASqwwgBQiMoTg&usqp=CAU" />
+            </ion-router-link>
+          </ion-thumbnail>
+          <ion-label>salade</ion-label>
+          <ion-grid [fixed]="true" class="flex">
+            <ion-row>
+              <ion-col>2</ion-col>
+            </ion-row>
+<ion-button [ngStyle]="{ 'color': selectedButtonIndex === 10 ? 'green' : 'red' }" size="small" (click)="changeGridBackground(10)" class="">Done</ion-button>
+          </ion-grid>
+        </ion-item>
+  
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <ion-router-link [routerLink]="['/']">
+              <img alt="Silhouette of mountains" src="https://www.aux-fourneaux.fr/wp-content/uploads/2018/05/21-id%C3%A9e-de-plats-l%C3%A9gers-pour-le-repas-du-soir-17.jpg" />
+            </ion-router-link>
+          </ion-thumbnail>
+          <ion-label>chorba</ion-label>
+          <ion-grid [fixed]="true" class="flex">
+            <ion-row>
+              <ion-col>2</ion-col>
+            </ion-row>
+<ion-button [ngStyle]="{ 'color': selectedButtonIndex === 11 ? 'green' : 'red' }" size="small" (click)="changeGridBackground(11)" class="">Done</ion-button>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  
+
+  
 </ion-content>
