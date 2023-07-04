@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>orderDetails</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">orderDetails</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="container">
+    <h1>OrderId: 3568415</h1>
+    <div class="flex justify-end">
+      <button class="bg-blueLogo text-white  p-2 rounded-lg">Accept Order</button>
+    </div>
+
+    <p>Order date: Feb 16, 2023 | <span class="text-yellowLogo">Estimated delivery: May 14,2022</span></p>
+
+
+    <div class="order">
+      <div class="order-item">
+        <div class="item-image">
+          <img src="https://www.foodnetwork.com/content/dam/images/food/fullset/2003/9/22/0/tm1a35_caprese_salad.jpg"
+            alt="Item 1">
+        </div>
+        <div class="item-details">
+          <h2>Caprese Salad</h2>
+          <p>Price: $19.99</p>
+          <p>Quantity: 2</p>
+        </div>
+      </div>
+      <div class="order-item">
+        <div class="item-image">
+          <img
+            src="https://www.allrecipes.com/thmb/1ul-jdOz8H4b6BDrRcYOuNmJgt4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/239867chef-johns-chicken-tikka-masala-ddmfs-3X4-0572-e02a25f8c7b745459a9106e9eb13de10.jpg"
+            alt="Item 2">
+        </div>
+        <div class="item-details">
+          <h2>Chicken Tikka Masala</h2>
+          <p>Price: $14.99</p>
+          <p>Quantity: 1</p>
+        </div>
+      </div>
+
+      <div class="order-item">
+        <div class="item-image">
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/5b845cdb0dbda3f74e2a867a/1643638307415-YULEHXVZ95NFQ1K3FCXT/1R4A6712.jpg?format=2500w"
+            alt="Item 3">
+        </div>
+        <div class="item-details">
+          <h2>Sushi</h2>
+          <p>Price: $9.99</p>
+          <p>Quantity: 3</p>
+        </div>
+      </div>
+    </div>
+    <hr class=" bold">
+    <div class="total">
+      <h3>Total: $89.94</h3>
+    </div>
+  </div>
+
+</ion-content>
